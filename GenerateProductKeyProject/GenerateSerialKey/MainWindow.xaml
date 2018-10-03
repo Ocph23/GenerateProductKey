@@ -1,0 +1,39 @@
+﻿<Window x:Class="GenerateSerialKey.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenerateSerialKey"
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="233" Width="470">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="177*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label FontSize="20" Grid.ColumnSpan="2" Content="App Generate Licence Kay" Grid.Row="0"/>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Label Margin="5" Height="30" Content="Product Id" />
+            <Label Margin="5"  Height="30" Content="Product Key" />
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBox Margin="5"  Height="30" Name="prodId" ></TextBox>
+            <TextBox Margin="5"  Height="30" Name="serialKey" ></TextBox>
+        </StackPanel>
+
+
+        <WrapPanel Margin="0,5,5,5" Grid.Row="2" HorizontalAlignment="Right" Grid.Column="1" Width="162" >
+            <Button Name="generate" Margin="3" Width="75" Content="Generate" Height="36" Click="generate_Click"></Button>
+            <Button Name="cancel" Margin="3" Width="75" Content="Cancel" Height="36"/>
+        </WrapPanel>
+
+    </Grid>
+</Window>
